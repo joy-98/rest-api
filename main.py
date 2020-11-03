@@ -1,5 +1,6 @@
 from flask import Flask, redirect, url_for, render_template
 from flask_restful import Api, Resource
+from questions import algebra
 
 app = Flask(__name__)
 api = Api(app)
@@ -11,9 +12,7 @@ def home():
 def A_math_question():
         return {"photo": "44", "topic": 55, "reason":"have fun"}	        
 
-names = {"tim": {"age": 22, "gender": "male"},	
-         "bill": {"age": 20, "gender": "male"},	       
-         "question": A_math_question()}
+names = {"q1": algebra.find_x_angel_in_qualdrilateral()}
 
 class HelloWorld(Resource):
     def get(self, name):
