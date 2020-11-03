@@ -1,8 +1,11 @@
-from flask import Flask
+from flask import Flask, redirect, url_for, render_template
 from flask_restful import Api, Resource
 
 app = Flask(__name__)
 api = Api(app)
+
+@app.route("/")
+
 
 def A_math_question():
         return {"photo": "44", "topic": 55, "reason":"have fun"}	        
