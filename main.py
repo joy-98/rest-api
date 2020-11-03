@@ -4,9 +4,8 @@ from flask_restful import Api, Resource
 app = Flask(__name__)
 api = Api(app)
 
-def A_math_question():	def A_math_question():
+def A_math_question():
         return {"photo": "44", "topic": 55, "reason":"have fun3"}	        
-
 
 names = {"tim": {"age": 22, "gender": "male"},	
          "bill": {"age": 20, "gender": "male"},	       
